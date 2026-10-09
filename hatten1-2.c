@@ -19,5 +19,5 @@ int main()
     num2 += 0.1;  // 10回目：0.1を足す
 
     // num1とnum2の差を小数点以下30桁で表示
-    printf("差は %.30f です\n", num1 - num2);
+    printf("差は %.23f です\n", num1 - num2);
 }
