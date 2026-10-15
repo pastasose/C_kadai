@@ -13,5 +13,5 @@ int main(){
     else if(month == 12 || month == 1 || month == 2)
         printf("%d月は冬です。\n", month);
     else
-        printf("%dは月じゃねえよ！\n", month);
+        printf("%d月なんてねえよ！\n", month);
 }
