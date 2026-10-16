@@ -28,24 +28,27 @@ int main(){
     }
 
     /*三角形の形を判別*/
+    
     if (a >= b + c) {
         printf("3辺が三角形をつくりません。\n");
     }
-    else if (a * a > b * b + c * c) {
-        printf("3辺 %d %d %d は鈍角三角形です。\n", a, b, c);
-    } 
-    else if (a * a == b * b + c * c) {
-        printf("3辺 %d %d %d は直角三角形です。\n", a, b, c);
-    } 
-    else {
-        printf("3辺 %d %d %d は鋭角三角形です。\n", a, b, c);
-    }
+    if (a <= b + c){
+        if (a * a > b * b + c * c) {
+            printf("3辺 %d %d %d は鈍角三角形です。\n", a, b, c);
+        } 
+        else if (a * a == b * b + c * c) {
+            printf("3辺 %d %d %d は直角三角形です。\n", a, b, c);
+        } 
+        else {
+            printf("3辺 %d %d %d は鋭角三角形です。\n", a, b, c);
+        }
 
         /*正三角形・二等辺三角形を判別*/
-    if (a == b && b == c) {
-    printf("さらに正三角形です。\n");
-    } 
-    else if (a == b || b == c) {
-    printf("さらに二等辺三角形です。\n");
+        if (a == b && b == c) {
+        printf("さらに正三角形です。\n");
+        } 
+        else if (a == b || b == c) {
+        printf("さらに二等辺三角形です。\n");
+        }
     }
 }

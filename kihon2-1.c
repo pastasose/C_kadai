@@ -11,7 +11,7 @@ int main(){
     double std;
     std=(h-100.0)*0.9;
 
-    printf("あなたの標準体重は%fです。\n", std);
+    printf("あなたの標準体重は%.2fです。\n", std);
 
     if (w-std>=8.0)
         printf("あなたは少し太っています。\n");
