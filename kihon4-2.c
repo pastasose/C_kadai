@@ -14,7 +14,10 @@ int main(){
         printf("%d番目のデータ：", i);
         scanf("%d", &value[i]);
     }
-    for (n; n>=0; n--){
-        printf("%d番目の内容は%dです.\n", n, value[n]);
+    
+    printf("\n");
+
+    for (int i = n - 1; i>=0; i--){
+        printf("%d番目の内容は%dです.\n", i, value[i]);
     }
 }
