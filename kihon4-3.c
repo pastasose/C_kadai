@@ -6,16 +6,20 @@ int main(){
 
     for (int i = 0; i < 5; i++){
         printf("%d番目のデータ：", i);
-        scanf("%d", value[i]);
+        scanf("%d", &value[i]);
     }
 
     int max = value[0];
     int index = 0;
 
-    for (int i = 1; 1 < 5; i++){
+    for (int i = 1; i < 5; i++){
         if (value[i] > max){
-
+            max = value[i];
+            index = i;
         }
     }
+
+    printf("最大の値は%dです。\n", max);
+    printf("最大の値は%d番目の要素にあります。\n", index);
 
 }
