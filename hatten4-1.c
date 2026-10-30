@@ -5,7 +5,7 @@ int main(){
     int x[MAX];
     int y[MAX];
     int n;
-    int naiseki;
+    int naiseki = 0;
 
     do {
         printf("ベクトルの要素数は？(最大500): ");
