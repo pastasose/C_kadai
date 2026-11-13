@@ -1,24 +1,53 @@
 #include <stdio.h>
-#define ROW 3
-#define COLUMN 3
 
-int main(){
-    int u[ROW][COLUMN];
-    int i, j;
+#define STUDENT 5
+#define SUBJECT 4
 
-    for (i = 0; i < ROW; i++){
-        for (j = 0; j < COLUMN; j++){
-            printf("input u[%d][%d]: ", i, j);
-            scanf("%d", &u[i][j]);
+int main()
+{
+    int score[STUDENT][SUBJECT] = {
+        {85, 74, 63, 90},
+        {78, 65, 70, 62},
+        {89, 92, 88, 76},
+        {32, 48, 66, 25},
+        {92, 76, 81, 98}
+    };
+
+    int student, subject;
+    int sum;
+
+    for (subject = 0; subject < SUBJECT; subject++) {
+        sum = 0;
+
+        for (student = 0; student < STUDENT; student++) {
+            sum += score[student][subject];
+        }
+
+        switch (subject) {
+            case 0:
+                printf("国語の平均点は %.1f です。\n", (double)sum / STUDENT);
+                break;
+            case 1:
+                printf("数学の平均点は %.1f です。\n", (double)sum / STUDENT);
+                break;
+            case 2:
+                printf("理科の平均点は %.1f です。\n", (double)sum / STUDENT);
+                break;
+            case 3:
+                printf("社会の平均点は %.1f です。\n", (double)sum / STUDENT);
+                break;
         }
     }
 
-    printf("The matrix is\n");
+    for (student = 0; student < STUDENT; student++) {
+        sum = 0;
 
-    for (i = 0; i < ROW; i++){
-        for ( j = 0; j < COLUMN; j++){
-            printf("%5d", u[i][j]);
+        for (subject = 0; subject < SUBJECT; subject++) {
+            sum += score[student][subject];
         }
-        printf("\n");
+
+        printf("番号 %d の学生の平均点は %.1f です。\n",
+               student + 1, (double)sum / SUBJECT);
     }
+
 }
