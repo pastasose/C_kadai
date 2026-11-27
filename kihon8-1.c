@@ -16,4 +16,20 @@ int main(){
         printf("u[%d]：", i);
         scanf("%d", &u[i]);
     } 
+
+    result = average(u, size);
+
+    printf("平均は%.1fです。\n", result);
+
+}
+
+double average(int array[], int size){
+
+    int sum = 0;
+
+    for (int i = 0; i < size; i++){
+        sum += array[i];
+}
+    return (double)sum / size;
+
 }
